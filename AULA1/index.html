@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOU o Inicio</title>
+     <style contenteditable>
+        body{
+            text-align: center;
+            background: #CFF4d2;
+            
+        }
+        h1{
+            text-align: center;
+            color: #329d9C;
+            text-shadow: -1px 2px 4px #205072;
+        }
+        button{
+            color: rgb(0, 0, 0);
+            border-radius: 8px;
+        }
+        img {
+        
+            height: 250px;
+            width: 350px;
+        }
+        input {
+            color:black;
+            border-radius: 8px;
+        }
+     </style>
+
+</head>
+<body>
+    <h1>PERGUNTE AO RAFAEL</h1>
+    <h2>Alerta de mensagem!</h2>
+    <p style = "text-align: center">
+    <button onclick="alerta()" style="background-color: #7be495;"><strong>i!iAlerta!i!</strong></button>
+    </p>
+    <p><ins><em><strong>PERGUNTE PERGUNTAS QUE SE RESPONDAM COM SIM E NÃO AO NOSSO PROFESSOR, E ELE TE RESPONDERÁ
+    </strong></em></ins></p>
+    <img src= "https://alfred.alboompro.com/resize/width/1024/url/storage.alboom.ninja/sites/54/albuns/61585/_6003142.JPG?1477596645">
+    <br/>
+    <input type="text">
+    <button onclick="pergunta()" style="background-color: #7be495;"><strong>PERGUNTAR</strong></button>
+    <h2><strong><ins>Mude a cor do fundo nos seguintes botões:</ins></strong></h2>
+    <button onclick="vermelho()" style = "background-color: #ff0000;"><strong>Vermelho</strong></button>
+    <button onclick="verde()" style= "background-color: #00ff00;""><strong>Verde</strong></button>
+    <button onclick="azul()" style="background-color: #0000ff;"><strong>Azul</strong></button>
+    <br/>
+    <button onclick="original()" style="background-color: #CFF4d2;"><strong>Voltar ao original</strong></button>
+    </body>
+        <script>
+            console.log("Olá mundo")
+            function alerta(){
+                var nome = prompt("Olá, para perguntar ao professor, informe seu nome:");
+                alert(` ${nome}...PERGUNTE AO PROFESSOR LOGO`);
+            }
+         
+            function pergunta(){
+                pergunta = Math.random() * 1;
+                pergunta > 0.4? alert(`Sim`) : alert(`Não`);
+               location.reload()
+    
+            }
+            function vermelho(){
+                document.getElementsByTagName("body")[0].style.background = "#ff0000";
+            }
+            function verde(){
+                document.getElementsByTagName("body")[0].style.background = "#00ff00";
+            }
+                function azul(){
+                document.getElementsByTagName("body")[0].style.background = "#0000ff";
+            }
+            function original(){
+                document.getElementsByTagName("body")[0].style.background = "#CFF4d2";
+            }
+        </script>
+    
+</body>
+</html>
