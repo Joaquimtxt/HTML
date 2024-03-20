@@ -15,8 +15,16 @@
             color: #329d9C;
             text-shadow: -1px 2px 4px #205072;
         }
+        h2{
+            text-align: center;
+            color: #000000
+        }
+        p{
+            text-align: center;
+            color: #000000
+        }
         button{
-            color: rgb(0, 0, 0);
+            color:#000000;
             border-radius: 8px;
         }
         img {
@@ -44,11 +52,13 @@
     <input type="text">
     <button onclick="pergunta()" style="background-color: #7be495;"><strong>PERGUNTAR</strong></button>
     <h2><strong><ins>Mude a cor do fundo nos seguintes botões:</ins></strong></h2>
-    <button onclick="vermelho()" style = "background-color: #ff0000;"><strong>Vermelho</strong></button>
-    <button onclick="verde()" style= "background-color: #00ff00;""><strong>Verde</strong></button>
-    <button onclick="azul()" style="background-color: #0000ff;"><strong>Azul</strong></button>
+    <button onclick="escolheCor('red') "style = "background-color: #ff0000;"><strong>Vermelho</strong></button>
+    <button onclick="escolheCor('green')" style= "background-color: #00ff00;"><strong>Verde</strong></button>
+    <button onclick="escolheCor('blue')" style="background-color: #0000ff;"><strong>Azul</strong></button>
     <br/>
+    <button onclick="escolheCor()"><strong>Escolha a cor</strong></button>
     <button onclick="original()" style="background-color: #CFF4d2;"><strong>Voltar ao original</strong></button>
+    <button onclick="modoEscuro()" style="background-color: #1b1e23; color:#FFFFFF"><strong>Modo Escuro</strong></button>
     </body>
         <script>
             console.log("Olá mundo")
@@ -63,18 +73,40 @@
                location.reload()
     
             }
-            function vermelho(){
-                document.getElementsByTagName("body")[0].style.background = "#ff0000";
-            }
-            function verde(){
-                document.getElementsByTagName("body")[0].style.background = "#00ff00";
-            }
-                function azul(){
-                document.getElementsByTagName("body")[0].style.background = "#0000ff";
+           
+            escolheCor = (cor) =>{
+                if (cor !== ""){
+                    document.getElementsByTagName("body")[0].style.background = cor;
+                }
+                if(cor == null){
+            document.getElementsByTagName("body")[0].style.background = prompt (
+                "Informe uma cor em inglês"
+            )
+                }
             }
             function original(){
                 document.getElementsByTagName("body")[0].style.background = "#CFF4d2";
+                document.getElementsByTagName("h1")[0].style.color = "#000000";
+                document.getElementsByTagName("h2")[0].style.color = "#000000";
+                document.getElementsByTagName("h2")[1].style.color = "#000000";
+                document.getElementsByTagName("p")[0].style.color = "#000000";
+                document.getElementsByTagName("ins")[0].style.color = "#000000";
+                document.getElementsByTagName("strong")[0].style.color = "#000000";
+                document.getElementsByTagName("em")[0].style.color = "#000000";
             }
+            function modoEscuro(){
+                document.getElementsByTagName("body")[0].style.background = "#1B1E23";
+                document.getElementsByTagName("h1")[0].style.color = "#FFFFFF";
+                document.getElementsByTagName("h2")[0].style.color = "#FFFFFF";
+                document.getElementsByTagName("p")[0].style.color = "#FFFFFF";
+                document.getElementsByTagName("h2")[1].style.color = "#FFFFFF";
+                document.getElementsByTagName("ins")[0].style.color = "#FFFFFF";
+                document.getElementsByTagName("strong")[0].style.color = "#FFFFFF";
+                document.getElementsByTagName("em")[0].style.color = "#FFFFFF";
+               
+                
+            }
+            
         </script>
     
 </body>
