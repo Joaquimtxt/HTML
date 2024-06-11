@@ -1,0 +1,16 @@
+/* Faz aplicação global de CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+/* Variáveis que podem ser usadas para todo o documento
+Ativa somente no Dark mode */
+:root {
+  --bg-url: url(../img/figma.jpg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center / cover;
+  height: 100vh;
+}
