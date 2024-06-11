@@ -13,4 +13,145 @@ Ativa somente no Dark mode */
 body {
   background: var(--bg-url) no-repeat top center / cover;
   height: 100vh;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+    width: 100%;
+    max-width: 588px;
+    margin: 56px auto 0px;
+    padding: 0px 24px;
+}
+
+#profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#profile img{
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(146,146,146, 0.8);
+    object-fit:top center;
+}
+
+#profile p{
+    margin-top: 8px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+/* botao */
+#botao{
+    position: relative; /*Vai ter a posição relativa ao item pai dele(Conteiner) */
+    width: 64px;
+    margin: 4px auto;
+}
+
+#botao button{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0;
+    background: #fff url(../img/moon.svg) no-repeat center;
+
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+
+    animation: slide-out 0.2s; /*executa a animação*/
+}
+
+#botao button:hover{
+    outline: 8px solid rgba(255,255,255, 0.2);
+    transition: all 0.2s;
+}
+
+#botao span{
+    background: rgba(255,255,255, 0.1);
+    display: block;
+    width: 54px;
+    height: 24px;
+    border: 1px solid rgba(255,255,255, 0.5);
+    border-radius: 24px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+#links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
+
+#links ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    border: 1px solid rgba(255,255,255, 0.5);
+    border-radius: 8px;
+    background: rgba(255,255,255, 0.1);
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+/*Quando o Mouse passa por cima, ele muda de cor*/
+#links ul li a:hover{
+    background: rgba(255,255,255, 0.2);
+    border: 1px solid #fff;
+
+    transition: all 1s;
+}
+
+#redeSocial{
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    gap: 16px;
+    font-size: 24px;
+}
+
+#redeSocial a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#redeSocial a:hover{
+    border-radius: 18px;
+    outline: 8px solid rgba(255,255,255, 0.2);
+    transition: all 0.2s;
+}
+
+#footer{
+    text-align: center;
+    font-size: 14px;
+    padding: 24px;
+}
+
+#footer p a{
+text-decoration: none;
+color: #fff;
+}
+
+#footer p a:hover{
+    border-radius: 18px;
+    outline: 8px solid rgba(255,255,255, 0.2);
+    transition: all 0.2s;
+}
+/* animação do botão */
+@keyframes slide-out{
+    from{left: 50%}
+    to  {left: 0}
+}
+@keyframes slide-in{
+    from{left: 0}
+    to  {left: 50%}
 }
